@@ -1,0 +1,7 @@
+{
+    "filter_execute": [
+    	//["\\.js$", "/Users/myname/Sites/projects/coolproject/build.sh"],
+    	//["\\.as$", "/Users/myname/Sites/projects/coolproject/flash/build.sh"]
+    ],
+    "build_on_save": 0
+}
