@@ -5,6 +5,31 @@ This simple plugin executes a command or multiple commands when a specific file 
 
 (Inspired by https://github.com/alexnj/SublimeOnSaveBuild)
 
+Installation
+------------
+
+**Without Git:** Download the latest source from [GitHub](https://github.com/luwes/ExecuteOnSave) and copy the ExecuteOnSave folder to your Sublime Text 2 "Packages" directory.
+
+**With Git:** Clone the repository in your Sublime Text 2 "Packages" directory:
+
+    git clone git://github.com/alexnj/ExecuteOnSave.git
+
+
+The "Packages" directory is located at:
+
+* OS X:
+
+        ~/Library/Application Support/Sublime Text 2/Packages/
+
+* Linux:
+
+        ~/.config/sublime-text-2/Packages/
+
+* Windows:
+
+        %APPDATA%/Sublime Text 2/Packages/
+
+
 Configuration
 -------------
 
@@ -36,3 +61,6 @@ Example project file:
 			"build_on_save": 1
 		}
 	}
+
+In this case javascript files that are saved trigger an execution of the ..repo/build.sh file and actionscript files that are saved trigger an execution of the ..repo/flash/build.sh.
+
