@@ -5,12 +5,18 @@ import re
 
 class ExecuteOnSave(sublime_plugin.EventListener):
     def on_post_save(self, view):
+        view.window().run_command("execute_on_save", {"saving": True})
 
+
+class ExecuteOnSaveCommand(sublime_plugin.TextCommand):
+    def run(self, edit, saving=False):
+
+        view = self.view
         global_settings = sublime.load_settings(__name__ + '.sublime-settings')
-        should_build = view.settings().get('build_on_save', global_settings.get('build_on_save', False))
+        build_on_save = view.settings().get('build_on_save', global_settings.get('build_on_save', False))
         filter_execute = view.settings().get('filter_execute', global_settings.get('filter_execute', []))
 
-        if not should_build:
+        if saving and not build_on_save:
             return
 
         for filter, execute in filter_execute:

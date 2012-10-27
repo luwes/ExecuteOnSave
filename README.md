@@ -1,8 +1,7 @@
 ExecuteOnSave Sublime Text 2 Plugin
 ===================================
 
-This simple plugin executes a command or multiple commands when a specific file is saved.
-
+This simple plugin executes a command or multiple commands when a specific file is saved.  
 (Inspired by https://github.com/alexnj/SublimeOnSaveBuild)
 
 Installation
@@ -54,13 +53,18 @@ Example project file:
 		],
 		"settings":
 		{
+			"build_on_save": 1,
 			"filter_execute":[
 				["\\.js$", "/Users/username/Sites/projects/flow2/repo/build.sh"],
 				["\\.as$", "/Users/username/Sites/projects/flow2/repo/flash/build.sh"]
-			],
-			"build_on_save": 1
+			]
 		}
 	}
 
 In this case javascript files that are saved trigger an execution of the ..repo/build.sh file and actionscript files that are saved trigger an execution of the ..repo/flash/build.sh.
 
+It's also possible to execute the commands with a keyboard combo instead of on every save. This is handy for commands that take a lot of time. For example, I have this in my `Preferences->Key Bindings - User`.
+
+	[
+		{ "keys": ["ctrl+z"], "command": "execute_on_save" }
+	]
