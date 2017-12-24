@@ -11,7 +11,7 @@ Installation
 
 **With Git:** Clone the repository in your Sublime Text 2 "Packages" directory:
 
-    git clone git://github.com/alexnj/ExecuteOnSave.git
+    git clone git://github.com/luwes/ExecuteOnSave.git
 
 
 The "Packages" directory is located at:
